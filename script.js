@@ -33,12 +33,30 @@ async function findImageFiles(folderName) {
     if (item.isDirectory()) {
       imageFiles = imageFiles.concat(await findImageFiles(path.join(folderName, item.name)))
     } else {
-      if (path.extname(item.name) === ".JPG") {
-        imageFiles.push(path.join(folderName, item.name))
+      try {
+        if (path.extname(item.name).toUpperCase() === ".JPG") {
+          imageFiles.push(path.join(folderName, item.name))
+        }
+        if (path.extname(item.name).toUpperCase() === ".JPEG") {
+          imageFiles.push(path.join(folderName, item.name))
+        }
+        if (path.extname(item.name).toUpperCase() === ".PNG") {
+          imageFiles.push(path.join(folderName, item.name))
+        }
+        if (path.extname(item.name).toUpperCase() === ".SVG") {
+          imageFiles.push(path.join(folderName, item.name))
+        }
+        if (path.extname(item.name).toUpperCase() === ".PDF") {
+          imageFiles.push(path.join(folderName, item.name))
+        }
+        if (path.extname(item.name).toUpperCase() === ".ICO") {
+          imageFiles.push(path.join(folderName, item.name))
+        }
+      } catch {
+        console.log("There was an error")
       }
     }
   }
-
   return imageFiles
 }
 
@@ -56,8 +74,7 @@ async function renameFilesFound(filesFound) {
     } catch {
       console.log("catch block ran")
     }
-
-    //console.log(filesFound)
+    console.log(filesFound)
   })
 }
 
