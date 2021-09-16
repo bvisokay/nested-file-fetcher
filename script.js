@@ -64,7 +64,8 @@ async function findImageFiles(folderName) {
 async function renameFilesFound(filesFound) {
   filesFound.forEach((item, index) => {
     try {
-      fs.rename(item, path.join("all_portraits", index + 1 + ".JPG"), err => {
+      let fileExtension = path.extname(item)
+      fs.rename(item, path.join("all_portraits", index + 1 + fileExtension), err => {
         if (err) {
           console.log("There was an error " + err)
         } else {
