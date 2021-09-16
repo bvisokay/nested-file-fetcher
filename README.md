@@ -2,25 +2,29 @@
 
 -Moving files from a Google Pixel phone to a hard drive, all of the photos taken in "portrait mode" were automatically put in a subfolder with the original non-portrait-mode photo
 
--To move all of nested photos back into one folder is very repetitive and time consuming... In my case they were was 1900 folders!
+-To move all of nested photos back into one folder is very repetitive and time consuming... In my case they were 3800 files in 1900 folders!
 
--Running this script will move all of the nested images in the subfolders to one folder
+-This script was created to move all of the nested images in the subfolders to one results folder
+
+-support was added for file types besides ".jpg"
+
+-Supported file types include: jpeg, jpg, png, gif, svg, pdf, and ico
+
+-The target file-types can be changed by updating one line of code
 
 ## Using the Script
 
--Need to have Node installed on your computer
+-Requires Node installed on your computer
 
 -Clone or download the contents of this project
 
--Move or copy all the folders containing the images into the "source-folders" folder
+-Move or copy all the folders containing the images or files you would like to "extract" into the "source-folders" folder
 
 -In the terminal run
 
 ```
 node script
 ```
-
-## End Result
 
 -A new folder will be created called "results"
 
