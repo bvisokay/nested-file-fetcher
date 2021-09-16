@@ -34,7 +34,7 @@ async function findImageFiles(folderName) {
       imageFiles = imageFiles.concat(await findImageFiles(path.join(folderName, item.name)))
     } else {
       try {
-        if (path.extname(item.name).toUpperCase() === ".JPG" || path.extname(item.name).toUpperCase() === ".JPEG" || path.extname(item.name).toUpperCase() === ".PNG" || path.extname(item.name).toUpperCase() === ".SVG" || path.extname(item.name).toUpperCase() === ".PDF" || path.extname(item.name).toUpperCase() === ".GIF" || path.extname(item.name).toUpperCase() === ".ICO") {
+        if (path.extname(item.name).toUpperCase() === ".JPG" || ".JPEG" || ".PNG" || ".SVG" || ".PDF" || ".GIF" || ".ICO") {
           imageFiles.push(path.join(folderName, item.name))
         }
       } catch {
