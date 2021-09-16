@@ -2,8 +2,8 @@ const fs = require("fs").promises
 const path = require("path")
 
 async function main() {
-  const allPortraitFolders = path.join(__dirname, "folders")
-  const outputDirectory = path.join(__dirname, "all_portraits")
+  const allSourceFolders = path.join(__dirname, "source-folders")
+  const outputDirectory = path.join(__dirname, "results")
 
   // create output directory if it doesn't exist
   try {
@@ -13,9 +13,8 @@ async function main() {
   }
 
   // find paths to all files
-  console.log(await findImageFiles(allPortraitFolders))
-
-  const filesFound = await findImageFiles(allPortraitFolders)
+  // console.log(await findImageFiles(allPortraitFolders))
+  const filesFound = await findImageFiles(allSourceFolders)
 
   // rename the files found
   await renameFilesFound(filesFound)
@@ -50,7 +49,7 @@ async function renameFilesFound(filesFound) {
   filesFound.forEach((item, index) => {
     try {
       let fileExtension = path.extname(item)
-      fs.rename(item, path.join("all_portraits", index + 1 + fileExtension), err => {
+      fs.rename(item, path.join("results", index + 1 + fileExtension), err => {
         if (err) {
           console.log("There was an error " + err)
         } else {
@@ -60,12 +59,6 @@ async function renameFilesFound(filesFound) {
     } catch {
       console.log("catch block ran")
     }
-    console.log(filesFound)
+    // console.log(filesFound)
   })
 }
-
-//custom rename file to new directory
-/* fs.rename(path.join(__dirname, "/testing", "hello.txt"), path.join(__dirname, "/output", "renamed.txt"), err => {
-  if (err) throw err
-  console.log("file renamed...")
-}) */
