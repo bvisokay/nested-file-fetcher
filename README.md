@@ -2,17 +2,17 @@
 
 - :camera_flash: Moving files from a Google Pixel phone to a hard drive, all of the photos taken in "portrait mode" were automatically put in a subfolder with the original non-portrait-mode photo
 
-- :file_folder: To move all of nested photos back into one folder is very repetitive and time consuming... In my case there was 3800 files in 1900 folders!
+- :file_folder: To move all of these nested photos back into one folder is very repetitive and time consuming. In my case there was 3800 files in 1900 folders...
 
-- Option #1: Use window file explorer to search for \*.jpg. it will bring up all the pictures. Search for mulitple file types by separating with OR (case sensitive)
+- Option #1: Use window file explorer to search for \*.jpg. it will bring up all the images with that file extension. Search for multiple file types by separating with OR (case sensitive) `*.jpg OR *.png OR *.svg`
 
-- `*.jpg OR .png OR .svg`
+- Option #2: Use this script to programmatically move all of the nested images in the subfolders to one results folder
 
-- Option #2: Use this script to programatically move all of the nested images in the subfolders to one results folder
+- Supported file types out-of-the-box include: jpeg, jpg, png, gif, svg, pdf, and ico
 
-- Supported file types include: jpeg, jpg, png, gif, svg, pdf, and ico
+- The target file-types can be changed by updating one line of code (line 36)
 
-- The target file-types can be changed by updating one line of code
+- Support for folders within folders
 
 ### Using the Script
 
@@ -38,9 +38,7 @@ node script
 
 - Supported file types include: jpeg, jpg, png, gif, svg, pdf, and ico
 
-- It is possible to search for files that do not end in these file extneions
-
-- Do this by editing line 36 to include your desired file extensions
+- It is possible to search for files that do not end in these file extensions by editing line 36 to include/exclude your desired file extensions
 
 ### Root Cause Has Been Fixed
 

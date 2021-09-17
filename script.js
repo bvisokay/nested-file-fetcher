@@ -22,7 +22,7 @@ async function main() {
 
 main()
 
-// recursive version of findSalesFiles function
+// recursive version of findImageFiles function
 async function findImageFiles(folderName) {
   let imageFiles = []
 
