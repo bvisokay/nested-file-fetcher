@@ -4,7 +4,9 @@
 
 - :file_folder: To move all of nested photos back into one folder is very repetitive and time consuming... In my case there was 3800 files in 1900 folders!
 
-- Option #1: Use window file explorer to search for \*.jpg. it will bring up all the pictures
+- Option #1: Use window file explorer to search for \*.jpg. it will bring up all the pictures. Search for mulitple file types by separating with OR (case sensitive)
+
+- `*.jpg OR .png OR .svg`
 
 - Option #2: Use this script to programatically move all of the nested images in the subfolders to one results folder
 
@@ -23,7 +25,7 @@
 - In the terminal run
 
 ```
-node app
+node script
 ```
 
 - A new folder will be created called "results"
